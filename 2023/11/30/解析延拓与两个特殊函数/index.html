@@ -16,12 +16,12 @@
   <meta name="author" content="曳涂">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言阶乘是个我们早已熟悉的概念。这篇文章就是要从阶乘开始讲我们重要的解析延拓。 正文解析延拓回想我们首次接触阶乘时对阶乘的定义$n!&#x3D;\prod_{i&#x3D;1}^{n}i$，但是高数中又出现了斯特林公式，显然这个初等定义是无法给出斯特林公式的，于是我们就想找出某个函数$f(x)$使得$f(n)&#x3D;n!$，我们回想起了函数方程的知识，我们就可以抽象出如下的函数方程$f(x)&#x3D;xf(x-1),f(1)&#x3D;1$">
+    <meta name="description" content="前言 阶乘是个我们早已熟悉的概念。这篇文章就是要从阶乘开始讲我们重要的解析延拓。 正文 解析延拓 回想我们首次接触阶乘时对阶乘的定义\(n!&#x3D;\prod_{i&#x3D;1}^{n}i\)，但是高数中又出现了斯特林公式，显然这个初等定义是无法给出斯特林公式的，于是我们就想找出某个函数\(f(x)\)使得\(f(n)&#x3D;n!\)，我们回想起了函数方程的知识，我们就可以抽象出如下的函数方程\(f(x)&#x3D;x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Re:从阶乘开始的解析延拓">
 <meta property="og:url" content="http://example.com/2023/11/30/%E8%A7%A3%E6%9E%90%E5%BB%B6%E6%8B%93%E4%B8%8E%E4%B8%A4%E4%B8%AA%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="废物避难所">
-<meta property="og:description" content="前言阶乘是个我们早已熟悉的概念。这篇文章就是要从阶乘开始讲我们重要的解析延拓。 正文解析延拓回想我们首次接触阶乘时对阶乘的定义$n!&#x3D;\prod_{i&#x3D;1}^{n}i$，但是高数中又出现了斯特林公式，显然这个初等定义是无法给出斯特林公式的，于是我们就想找出某个函数$f(x)$使得$f(n)&#x3D;n!$，我们回想起了函数方程的知识，我们就可以抽象出如下的函数方程$f(x)&#x3D;xf(x-1),f(1)&#x3D;1$">
+<meta property="og:description" content="前言 阶乘是个我们早已熟悉的概念。这篇文章就是要从阶乘开始讲我们重要的解析延拓。 正文 解析延拓 回想我们首次接触阶乘时对阶乘的定义\(n!&#x3D;\prod_{i&#x3D;1}^{n}i\)，但是高数中又出现了斯特林公式，显然这个初等定义是无法给出斯特林公式的，于是我们就想找出某个函数\(f(x)\)使得\(f(n)&#x3D;n!\)，我们回想起了函数方程的知识，我们就可以抽象出如下的函数方程\(f(x)&#x3D;x">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/111450476_p0.png">
 <meta property="article:published_time" content="2023-11-30T09:37:26.000Z">
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.4k 字
+          4.7k 字
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
         
-          37 分钟
+          40 分钟
         
       </span>
     
@@ -289,96 +289,119 @@
             
               <div class="markdown-body">
                 
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>阶乘是个我们早已熟悉的概念。这篇文章就是要从阶乘开始讲我们重要的解析延拓。</p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="解析延拓"><a href="#解析延拓" class="headerlink" title="解析延拓"></a>解析延拓</h2><p>回想我们首次接触阶乘时对阶乘的定义$n!=\prod_{i=1}^{n}i$，但是高数中又出现了斯特林公式，显然这个初等定义是无法给出斯特林公式的，于是我们就想找出某个函数$f(x)$使得$f(n)=n!$，我们回想起了函数方程的知识，我们就可以抽象出如下的函数方程$f(x)=xf(x-1),f(1)=1$。显然，$f(x)$的定义域是正整数，但是我们如果将小数，负数甚至是复数代进去又会怎样呢。这种想法并不罕见，例如我们最开始学幂的时候指数只能是正整数，到后来我们一步步扩展到有理数，实数，乃至现在的复数。这也是一种延拓，因此，下面我们可以正式拿出解析延拓的定义</p>
-<p><font color="Red">若$f_1(x)$在区域$\sigma _1$内解析，$f_2(x)$在区域$\sigma _2$内解析，$\sigma_1\cap \sigma _2=\sigma_{12}$非空，且在$\sigma_{12}$内$f_1(x)=f_2(x)$,则称$f_1(x)$和$f_2(x)$互为解析延拓。</font><br>且这个解析延拓是唯一的，即<font color="Red">如果$f_2(z)$和$f_3(z)$都是$f_1(z)$在区域$\sigma_2$中的解析延拓，则$f_2(z)=f_3(z)$</font>。这个定理我们不证，但需要说明的是，解析延拓的唯一性定理是复变函数的特有性质，实变函数是不可能有这样的性质的。</p>
-<h2 id="Gamma-函数"><a href="#Gamma-函数" class="headerlink" title="$\Gamma$函数"></a>$\Gamma$函数</h2><p>上面提到阶乘所需要满足的函数方程，这个方程显然有无数解，因为我们总可以通过插值的方法将这些点用一段光滑曲线进行连接，好在我们足够幸运，生在了21世纪，欧拉给出了一个很好的关于这个方程的解，它具有一个简单的形式并且在右半平面是解析的。我们称其为$\Gamma$函数。定义为</p>
-<script type="math/tex; mode=display">
-\Gamma(z)=\int_{0}^{\infty}e^{-t}t^{z-1}dt</script><p>它的收敛条件为$Re(z)&gt;0$。我们可以画出当其宗量为实数时的图像<br><img src="/2023/11/30/%E8%A7%A3%E6%9E%90%E5%BB%B6%E6%8B%93%E4%B8%8E%E4%B8%A4%E4%B8%AA%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/1.png" srcset="/img/loading.gif" lazyload alt><br>首先验证其是满足该函数方程的。</p>
-<script type="math/tex; mode=display">
+                <h1 id="前言">前言</h1>
+<p>阶乘是个我们早已熟悉的概念。这篇文章就是要从阶乘开始讲我们重要的解析延拓。</p>
+<h1 id="正文">正文</h1>
+<h2 id="解析延拓">解析延拓</h2>
+<p>回想我们首次接触阶乘时对阶乘的定义<span class="math inline">\(n!=\prod_{i=1}^{n}i\)</span>，但是高数中又出现了斯特林公式，显然这个初等定义是无法给出斯特林公式的，于是我们就想找出某个函数<span class="math inline">\(f(x)\)</span>使得<span class="math inline">\(f(n)=n!\)</span>，我们回想起了函数方程的知识，我们就可以抽象出如下的函数方程<span class="math inline">\(f(x)=xf(x-1),f(1)=1\)</span>。显然，<span class="math inline">\(f(x)\)</span>的定义域是正整数，但是我们如果将小数，负数甚至是复数代进去又会怎样呢。这种想法并不罕见，例如我们最开始学幂的时候指数只能是正整数，到后来我们一步步扩展到有理数，实数，乃至现在的复数。这也是一种延拓，因此，下面我们可以正式拿出解析延拓的定义
+<font color="Red">若<span class="math inline">\(f_1(x)\)</span>在区域<span class="math inline">\(\sigma _1\)</span>内解析，<span class="math inline">\(f_2(x)\)</span>在区域<span class="math inline">\(\sigma _2\)</span>内解析，<span class="math inline">\(\sigma_1\cap \sigma
+_2=\sigma_{12}\)</span>非空，且在<span class="math inline">\(\sigma_{12}\)</span>内<span class="math inline">\(f_1(x)=f_2(x)\)</span>,则称<span class="math inline">\(f_1(x)\)</span>和<span class="math inline">\(f_2(x)\)</span>互为解析延拓。</font>
+且这个解析延拓是唯一的，即<font color="Red">如果<span class="math inline">\(f_2(z)\)</span>和<span class="math inline">\(f_3(z)\)</span>都是<span class="math inline">\(f_1(z)\)</span>在区域<span class="math inline">\(\sigma_2\)</span>中的解析延拓，则<span class="math inline">\(f_2(z)=f_3(z)\)</span></font>。这个定理我们不证，但需要说明的是，解析延拓的唯一性定理是复变函数的特有性质，实变函数是不可能有这样的性质的。</p>
+<h2 id="gamma函数"><span class="math inline">\(\Gamma\)</span>函数</h2>
+<p>上面提到阶乘所需要满足的函数方程，这个方程显然有无数解，因为我们总可以通过插值的方法将这些点用一段光滑曲线进行连接，好在我们足够幸运，生在了21世纪，欧拉给出了一个很好的关于这个方程的解，它具有一个简单的形式并且在右半平面是解析的。我们称其为<span class="math inline">\(\Gamma\)</span>函数。定义为 <span class="math display">\[
+\Gamma(z)=\int_{0}^{\infty}e^{-t}t^{z-1}dt
+\]</span> 它的收敛条件为<span class="math inline">\(Re(z)&gt;0\)</span>。我们可以画出当其宗量为实数时的图像
+<img src="/2023/11/30/%E8%A7%A3%E6%9E%90%E5%BB%B6%E6%8B%93%E4%B8%8E%E4%B8%A4%E4%B8%AA%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/1.png" srcset="/img/loading.gif" lazyload> 首先验证其是满足该函数方程的。 <span class="math display">\[
 \begin{aligned}
-    \Gamma(z+1)&=\int_{0}^{\infty}e^{-t}t^{z}dt\\
-    &=-\int_{0}^{\infty}t^{z}de^{-t}\\
-    &=-(e^{-z}t^{z}|^{\infty}_0-\int_{0}^{\infty}e^{-z}dt^{z})\\
-    &=-(e^{-z}t^{z}|^{\infty}_0-z\int_{0}^{\infty}e^{-z}t^{z-1})\\
-    &=-(0-z\Gamma(z))\\
-    &=z\Gamma(z)
-\end{aligned}</script><p>又易知$\Gamma(2)=1$，故$\Gamma(n)=(n-1)!$。<br>$\Gamma$函数还有一个重要性质。即$\Gamma (z)\Gamma (1-z)=\frac{\pi}{sin(z\pi)}$证明如下</p>
-<script type="math/tex; mode=display">
+    \Gamma(z+1)&amp;=\int_{0}^{\infty}e^{-t}t^{z}dt\\
+    &amp;=-\int_{0}^{\infty}t^{z}de^{-t}\\
+    &amp;=-(e^{-z}t^{z}|^{\infty}_0-\int_{0}^{\infty}e^{-z}dt^{z})\\
+    &amp;=-(e^{-z}t^{z}|^{\infty}_0-z\int_{0}^{\infty}e^{-z}t^{z-1})\\
+    &amp;=-(0-z\Gamma(z))\\
+    &amp;=z\Gamma(z)
+\end{aligned}
+\]</span> 又易知<span class="math inline">\(\Gamma(2)=1\)</span>，故<span class="math inline">\(\Gamma(n)=(n-1)!\)</span>。 <span class="math inline">\(\Gamma\)</span>函数还有一个重要性质。即<span class="math inline">\(\Gamma (z)\Gamma
+(1-z)=\frac{\pi}{sin(z\pi)}\)</span>证明如下 <span class="math display">\[
 \begin{aligned}
-    \Gamma (z)\Gamma (1-z)&=\int_{0}^{\infty}e^{-t}t^{z-1}dt\int_{0}^{\infty}e^{-s}s^{-z}ds\\
-    &=\iint_{0}^{\infty}e^{-(s+t)}(\frac{t}{s})^z\frac{1}{t}dsdt
-\end{aligned}</script><p>做变量代换</p>
-<script type="math/tex; mode=display">
+    \Gamma (z)\Gamma
+(1-z)&amp;=\int_{0}^{\infty}e^{-t}t^{z-1}dt\int_{0}^{\infty}e^{-s}s^{-z}ds\\
+    &amp;=\iint_{0}^{\infty}e^{-(s+t)}(\frac{t}{s})^z\frac{1}{t}dsdt
+\end{aligned}
+\]</span> 做变量代换 <span class="math display">\[
 \left\{\begin{matrix}
   \zeta=s+t \\
   \eta=\frac{t}{s}
-\end{matrix}\right.</script><p>则该变换的雅可比行列式为</p>
-<script type="math/tex; mode=display">
+\end{matrix}\right.
+\]</span> 则该变换的雅可比行列式为 <span class="math display">\[
 \begin{vmatrix}
-  \frac{\partial s}{\partial \zeta } & \frac{\partial s}{\partial \eta } \\
-  \frac{\partial t}{\partial \zeta } &\frac{\partial t}{\partial \eta }
+  \frac{\partial s}{\partial \zeta } &amp; \frac{\partial s}{\partial
+\eta } \\
+  \frac{\partial t}{\partial \zeta } &amp;\frac{\partial t}{\partial
+\eta }
 \end{vmatrix}=
 \begin{vmatrix}
-  (\frac{\partial \zeta}{\partial s })^{-1} & (\frac{\partial \eta}{\partial s })^{-1} \\
-  (\frac{\partial \zeta}{\partial t })^{-1} &(\frac{\partial \eta}{\partial t })^{-1}
-\end{vmatrix}=\frac{\zeta}{(1+\eta)^2}</script><p>则原积分变为</p>
-<script type="math/tex; mode=display">
+  (\frac{\partial \zeta}{\partial s })^{-1} &amp; (\frac{\partial
+\eta}{\partial s })^{-1} \\
+  (\frac{\partial \zeta}{\partial t })^{-1} &amp;(\frac{\partial
+\eta}{\partial t })^{-1}
+\end{vmatrix}=\frac{\zeta}{(1+\eta)^2}
+\]</span> 则原积分变为 <span class="math display">\[
 \begin{aligned}
-    \iint_{0}^{\infty}e^{-(s+t)}(\frac{t}{s})^z\frac{1}{t}dsdt&=\iint_{0}^{\infty}e^{-\zeta}\eta^z\frac{1+\eta}{\zeta\eta}\frac{\zeta}{(1+\eta)^2}d\zeta d\eta\\
-    &=\int_{0}^{\infty}e^{-\zeta}d\zeta\int_{0}^{\infty}\frac{\eta^{z-1}}{1+\eta}\\
-    &=\int_{0}^{\infty}\frac{\eta^{z-1}}{1+\eta}\\
-    &=\frac{\pi}{sin(\pi z)}
-\end{aligned}</script><p>由该性质有$\Gamma(\frac{1}{2})=\sqrt{\pi}$。<br>$\Gamma$函数还有一个重要应用是计算形如$\int_0^{\infty}x^ne^{-x^2}$这样的积分。只需做一个简单换元，令$t=r^2$则原积分变为$\int_{-\infty}^{\infty}r^{2x-1}e^{-r^2}dr$,即$\Gamma(\frac{p+1}{2})=\int_{-\infty}^{\infty}r^{p}e^{-r^2}dr$</p>
-<h2 id="B-函数"><a href="#B-函数" class="headerlink" title="$B$函数"></a>$B$函数</h2><p>定义</p>
-<script type="math/tex; mode=display">
-B(p,q)=\int^{1}_{0}t^{p-1}(1-t)^{q-1}dt</script><p>令$t=sin^2\phi$</p>
-<script type="math/tex; mode=display">
+    \iint_{0}^{\infty}e^{-(s+t)}(\frac{t}{s})^z\frac{1}{t}dsdt&amp;=\iint_{0}^{\infty}e^{-\zeta}\eta^z\frac{1+\eta}{\zeta\eta}\frac{\zeta}{(1+\eta)^2}d\zeta
+d\eta\\
+    &amp;=\int_{0}^{\infty}e^{-\zeta}d\zeta\int_{0}^{\infty}\frac{\eta^{z-1}}{1+\eta}\\
+    &amp;=\int_{0}^{\infty}\frac{\eta^{z-1}}{1+\eta}\\
+    &amp;=\frac{\pi}{sin(\pi z)}
+\end{aligned}
+\]</span><br>
+由该性质有<span class="math inline">\(\Gamma(\frac{1}{2})=\sqrt{\pi}\)</span>。 <span class="math inline">\(\Gamma\)</span>函数还有一个重要应用是计算形如<span class="math inline">\(\int_0^{\infty}x^ne^{-x^2}\)</span>这样的积分。只需做一个简单换元，令<span class="math inline">\(t=r^2\)</span>则原积分变为<span class="math inline">\(\int_{-\infty}^{\infty}r^{2x-1}e^{-r^2}dr\)</span>,即<span class="math inline">\(\Gamma(\frac{p+1}{2})=\int_{-\infty}^{\infty}r^{p}e^{-r^2}dr\)</span></p>
+<h2 id="b函数"><span class="math inline">\(B\)</span>函数</h2>
+<p>定义 <span class="math display">\[
+B(p,q)=\int^{1}_{0}t^{p-1}(1-t)^{q-1}dt
+\]</span> 令<span class="math inline">\(t=sin^2\phi\)</span> <span class="math display">\[
 \begin{aligned}
-    \int^{1}_{0}t^{p-1}(1-t)^{q-1}dt&=2\int^{\frac{\pi}{2}}_{0}sin^{2p-1}\phi cos^{2q-1}\phi d\phi
-\end{aligned}</script><p>容易发现$B$函数与$\Gamma$函数有如下关系</p>
-<script type="math/tex; mode=display">
-B(p,q)=\frac{\Gamma(p)\Gamma(q)}{\Gamma(p+q)}</script><p>证明如下</p>
-<script type="math/tex; mode=display">
+    \int^{1}_{0}t^{p-1}(1-t)^{q-1}dt&amp;=2\int^{\frac{\pi}{2}}_{0}sin^{2p-1}\phi
+cos^{2q-1}\phi d\phi
+\end{aligned}
+\]</span> 容易发现<span class="math inline">\(B\)</span>函数与<span class="math inline">\(\Gamma\)</span>函数有如下关系 <span class="math display">\[
+B(p,q)=\frac{\Gamma(p)\Gamma(q)}{\Gamma(p+q)}
+\]</span> 证明如下 <span class="math display">\[
 \begin{aligned}
     \Gamma(p)=\int_{0}^{\infty}e^{-t}t^{p-1}dt\\
     \Gamma(q)=\int_{0}^{\infty}e^{-t}t^{q-1}dt
-\end{aligned}</script><p>记上面两个式子中的t分别为$x^2$和$y^2$。<br>有</p>
-<script type="math/tex; mode=display">
+\end{aligned}
+\]</span> 记上面两个式子中的t分别为<span class="math inline">\(x^2\)</span>和<span class="math inline">\(y^2\)</span>。 有 <span class="math display">\[
 \begin{aligned}
     \Gamma(p)=2\int_{0}^{\infty}e^{-x^2}x^{2p-1}dx\\
     \Gamma(q)=2\int_{0}^{\infty}e^{-y^2}y^{2q-1}dy
-\end{aligned}</script><p>则</p>
-<script type="math/tex; mode=display">
+\end{aligned}
+\]</span> 则 <span class="math display">\[
 \begin{aligned}
-    \Gamma(p)\Gamma(q)&=4\iint_{0}^{\infty}e^{-(x^2+y^2)}x^{2p-1}y^{2q-1}dxdy\\
-    &=4\iint_{0}^{\infty}e^{-\rho ^2}(\rho cos\theta)^{2p-1}(\rho sin\theta)^{2q-1}\rho d\rho d\theta\\
-    &=2\int^{\frac{\pi}{2}}_{0}sin^{2p-1}\theta cos^{2q-1}\theta d\theta\cdot 2\int_{0}^{\infty}e^{-\rho ^2}\rho^{2(p+q-1)}d\frac{\rho^2}{2}\\
-    &=\Gamma(p+q)B(p,q)
-\end{aligned}</script><p>原式得证。<br>下面给出一个使用$B$函数的例子</p>
-<h2 id="超球体积"><a href="#超球体积" class="headerlink" title="超球体积"></a>超球体积</h2><p>超球问题表述为，设$N$维空间中超球的方程为$\Omega:\sum_{i=1}^{N}x_i^2\le r^2$。求该超球的体积。即求积分</p>
-<script type="math/tex; mode=display">
-\int\cdots\int_\Omega dx_1\cdots dx_n</script><p>为了解决这个问题，我们首先可以明确，$N$维超球的体积一定是如下形式</p>
-<script type="math/tex; mode=display">
-V=V_nr^n</script><p>其中$V_n$是单位超球的体积，即$r=1$时的超球体积。其次我们回想求三维空间球体积的时候，我们是将其切分为无数个二维的圆再进行积分操作。即先将$x^2+y^2+z^2=1$变成$x^2+y^2=1-z^2$再利用圆面积公式$V=V_2 r^2$求积分</p>
-<script type="math/tex; mode=display">
-V_3=\int_{-1}^1V_2(1-z^2)dz</script><p>那么我们几乎可以同样这样来操作。即有</p>
-<script type="math/tex; mode=display">
+    \Gamma(p)\Gamma(q)&amp;=4\iint_{0}^{\infty}e^{-(x^2+y^2)}x^{2p-1}y^{2q-1}dxdy\\
+    &amp;=4\iint_{0}^{\infty}e^{-\rho ^2}(\rho cos\theta)^{2p-1}(\rho
+sin\theta)^{2q-1}\rho d\rho d\theta\\
+    &amp;=2\int^{\frac{\pi}{2}}_{0}sin^{2p-1}\theta cos^{2q-1}\theta
+d\theta\cdot 2\int_{0}^{\infty}e^{-\rho
+^2}\rho^{2(p+q-1)}d\frac{\rho^2}{2}\\
+    &amp;=\Gamma(p+q)B(p,q)
+\end{aligned}
+\]</span> 原式得证。 下面给出一个使用<span class="math inline">\(B\)</span>函数的例子</p>
+<h2 id="超球体积">超球体积</h2>
+<p>超球问题表述为，设<span class="math inline">\(N\)</span>维空间中超球的方程为<span class="math inline">\(\Omega:\sum_{i=1}^{N}x_i^2\le
+r^2\)</span>。求该超球的体积。即求积分 <span class="math display">\[
+\int\cdots\int_\Omega dx_1\cdots dx_n
+\]</span> 为了解决这个问题，我们首先可以明确，<span class="math inline">\(N\)</span>维超球的体积一定是如下形式 <span class="math display">\[
+V=V_nr^n
+\]</span> 其中<span class="math inline">\(V_n\)</span>是单位超球的体积，即<span class="math inline">\(r=1\)</span>时的超球体积。其次我们回想求三维空间球体积的时候，我们是将其切分为无数个二维的圆再进行积分操作。即先将<span class="math inline">\(x^2+y^2+z^2=1\)</span>变成<span class="math inline">\(x^2+y^2=1-z^2\)</span>再利用圆面积公式<span class="math inline">\(V=V_2 r^2\)</span>求积分 <span class="math display">\[
+V_3=\int_{-1}^1V_2(1-z^2)dz
+\]</span> 那么我们几乎可以同样这样来操作。即有 <span class="math display">\[
 \begin{aligned}
-    V_{n+1}&=\int_{-1}^{1}V_n(1-x_{n+1}^2)^{\frac{n}{2}}dx_{n+1}\\
-    &=2V_n\int_{0}^{1}(1-x_{n+1}^2)^{\frac{n}{2}}dx_{n+1}\\
-    &=V_n\int_{0}^{1}\frac{1}{x_{n+1}}(1-x_{n+1}^2)^{\frac{n}{2}}dx_{n+1}^2\\
-    &=V_n\int_{0}^{1}t^{-\frac{1}{2}}(1-t)^{\frac{n}{2}}dt\\
-    &=V_nB(\frac{1}{2},\frac{n}{2}+1)
-\end{aligned}</script><p>因此</p>
-<script type="math/tex; mode=display">\begin{aligned}
-    V_n&=V_{n-1}\frac{\Gamma(\frac{1}{2})\Gamma(\frac{n-1}{2}+1)}{\Gamma(\frac{n}{2}+1)}\\
-    &=\frac{\Gamma(\frac{1}{2})\Gamma(\frac{n-1}{2}+1)}{\Gamma(\frac{n}{2}+1)}\frac{\Gamma(\frac{1}{2})\Gamma(\frac{n-2}{2}+1)}{\Gamma(\frac{n-1}{2}+1)}\cdots\frac{\Gamma(\frac{1}{2})\Gamma(2)}{\Gamma(\frac{5}{2})}V_2\\
-    &=\frac{\Gamma^{n-2}(\frac{1}{2})\Gamma(2)}{\Gamma(\frac{n}{2}+1)}V_2\\
-    &=\frac{\pi^{\frac{n}{2}}}{\Gamma(\frac{n}{2}+1)}
-\end{aligned}</script><p>故$N$维超球的体积公式为</p>
-<script type="math/tex; mode=display">
-V=\frac{\pi^{\frac{n}{2}}}{\Gamma(\frac{n}{2}+1)}r^n</script><p><img src="/2023/11/30/%E8%A7%A3%E6%9E%90%E5%BB%B6%E6%8B%93%E4%B8%8E%E4%B8%A4%E4%B8%AA%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/2.png" srcset="/img/loading.gif" lazyload alt="单位超球体积与维度关系"></p>
+    V_{n+1}&amp;=\int_{-1}^{1}V_n(1-x_{n+1}^2)^{\frac{n}{2}}dx_{n+1}\\
+    &amp;=2V_n\int_{0}^{1}(1-x_{n+1}^2)^{\frac{n}{2}}dx_{n+1}\\
+    &amp;=V_n\int_{0}^{1}\frac{1}{x_{n+1}}(1-x_{n+1}^2)^{\frac{n}{2}}dx_{n+1}^2\\
+    &amp;=V_n\int_{0}^{1}t^{-\frac{1}{2}}(1-t)^{\frac{n}{2}}dt\\
+    &amp;=V_nB(\frac{1}{2},\frac{n}{2}+1)
+\end{aligned}
+\]</span> 因此 <span class="math display">\[\begin{aligned}
+    V_n&amp;=V_{n-1}\frac{\Gamma(\frac{1}{2})\Gamma(\frac{n-1}{2}+1)}{\Gamma(\frac{n}{2}+1)}\\
+    &amp;=\frac{\Gamma(\frac{1}{2})\Gamma(\frac{n-1}{2}+1)}{\Gamma(\frac{n}{2}+1)}\frac{\Gamma(\frac{1}{2})\Gamma(\frac{n-2}{2}+1)}{\Gamma(\frac{n-1}{2}+1)}\cdots\frac{\Gamma(\frac{1}{2})\Gamma(2)}{\Gamma(\frac{5}{2})}V_2\\
+    &amp;=\frac{\Gamma^{n-2}(\frac{1}{2})\Gamma(2)}{\Gamma(\frac{n}{2}+1)}V_2\\
+    &amp;=\frac{\pi^{\frac{n}{2}}}{\Gamma(\frac{n}{2}+1)}
+\end{aligned}
+\]</span> 故<span class="math inline">\(N\)</span>维超球的体积公式为
+<span class="math display">\[
+V=\frac{\pi^{\frac{n}{2}}}{\Gamma(\frac{n}{2}+1)}r^n
+\]</span> <img src="/2023/11/30/%E8%A7%A3%E6%9E%90%E5%BB%B6%E6%8B%93%E4%B8%8E%E4%B8%A4%E4%B8%AA%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/2.png" srcset="/img/loading.gif" lazyload alt="单位超球体积与维度关系"></p>
 
                 
               </div>
