@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/example.png">
 <meta property="article:published_time" content="2023-12-02T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-12-28T16:47:19.000Z">
+<meta property="article:modified_time" content="2023-12-29T05:04:47.473Z">
 <meta property="article:author" content="曳涂">
 <meta property="article:tag" content="物理">
 <meta property="article:tag" content="普物力学">
@@ -238,7 +238,7 @@
         
         
         
-          125 分钟
+          129 分钟
         
       </span>
     
@@ -299,13 +299,13 @@
 <h3 id="基本物理量">基本物理量</h3>
 <p><span class="math inline">\(\vec{r}\)</span>(位矢)、<span class="math inline">\(\vec{v}\)</span>(速度)、<span class="math inline">\(\vec{a}\)</span>(加速度)。 微分关系 <span class="math display">\[
 \begin{aligned}
-    \vec{v}=\frac{d\vec{r}}{dt}\\
-    \vec{a}=\frac{d\vec{v}}{dt}
+    \vec{v}=\frac{\mathrm{d}\vec{r}}{\mathrm{d}t}\\
+    \vec{a}=\frac{\mathrm{d}\vec{v}}{\mathrm{d}t}
 \end{aligned}
 \]</span> 积分关系 <span class="math display">\[
 \begin{aligned}
-    \vec{r}=\int\vec{v}dt\\
-    \vec{v}=\int\vec{a}dt
+    \vec{r}=\int\vec{v}\mathrm{d}t\\
+    \vec{v}=\int\vec{a}\mathrm{d}t
 \end{aligned}
 \]</span></p>
 <h3 id="两种坐标系">两种坐标系</h3>
@@ -313,8 +313,8 @@
 <p>基向量为<span class="math inline">\(\vec{i}\)</span>和<span class="math inline">\(\vec{j}\)</span>，且<span class="math inline">\(\vec{i}\)</span>和<span class="math inline">\(\vec{j}\)</span>为常矢量。在该坐标系中位矢，速度和加速度可以表示为
 <span class="math display">\[\begin{aligned}
     \vec{r}&amp;=x\vec{i}+y\vec{j}\\
-    \vec{v}&amp;=\frac{d\vec{r}}{dt}=\frac{dx}{dt}\vec{i}+\frac{dy}{dt}\vec{j}\\
-    \vec{a}&amp;=\frac{d\vec{v}}{dt}=\frac{d^2x}{dt^2}\vec{i}+\frac{d^2y}{dt^2}\vec{j}
+    \vec{v}&amp;=\frac{\mathrm{d}\vec{r}}{\mathrm{d}t}=\frac{\mathrm{d}x}{\mathrm{d}t}\vec{i}+\frac{\mathrm{d}y}{\mathrm{d}t}\vec{j}\\
+    \vec{a}&amp;=\frac{\mathrm{d}\vec{v}}{\mathrm{d}t}=\frac{\mathrm{d}^2x}{\mathrm{d}t^2}\vec{i}+\frac{\mathrm{d}^2y}{\mathrm{d}t^2}\vec{j}
 \end{aligned}
 \]</span></p>
 <h4 id="极坐标">极坐标</h4>
@@ -325,15 +325,15 @@
 \end{aligned}
 \]</span> 有重要关系 <span class="math display">\[
 \begin{aligned}
-    d\hat{r}=\hat{\theta}d\theta\\
-    d\hat{\theta}=-\hat{r}d\theta
+    \mathrm{d}\hat{r}=\hat{\theta}\mathrm{d}\theta\\
+    \mathrm{d}\hat{\theta}=-\hat{r}\mathrm{d}\theta
 \end{aligned}
 \]</span> <img src="/2023/12/02/%E7%89%A9%E5%A4%A9%E5%AD%A6%E7%94%9F%E5%8F%91%E5%B1%95%E4%B8%AD%E5%BF%83%E6%9C%9F%E6%9C%AB%E5%8A%9B%E5%AD%A6%E5%A4%8D%E4%B9%A0%E8%AE%B2%E4%B9%89/Screenshot_20231203-212629.png" srcset="/img/loading.gif" lazyload alt="极坐标推导用图"> 图中可以看到<span class="math inline">\(d\hat{\theta}\)</span>与<span class="math inline">\(\hat{r}\)</span>方向相反，<span class="math inline">\(d\hat{r}\)</span>与<span class="math inline">\(\hat{\theta}\)</span>方向相同。
 故在极坐标中位矢，速度，加速度有如下表示 <span class="math display">\[
 \begin{aligned}
     \vec{r}&amp;=r\hat{r}\\
-    \vec{v}&amp;=\frac{d\vec{r}}{dt}=\dot{r}\hat{r}+r\frac{d\hat{r}}{dt}=\dot{r}\hat{r}+r\dot{\theta}\hat{\theta}\\
-    \vec{a}&amp;=\frac{d\vec{v}}{dt}=\ddot{r}\hat{r}+\dot{r}\frac{d\hat{r}}{dt}+\dot{r}\dot{\theta}\hat{\theta}+r\ddot{\theta}\hat{\theta}+r\dot{\theta}\frac{d\hat{\theta}}{dt}=(\ddot{r}-r\dot{\theta}^2)\hat{r}+(2\dot{r}\dot{\theta}+r\ddot{\theta})\hat{\theta}
+    \vec{v}&amp;=\frac{\mathrm{d}\vec{r}}{\mathrm{d}t}=\dot{r}\hat{r}+r\frac{\mathrm{d}\hat{r}}{\mathrm{d}t}=\dot{r}\hat{r}+r\dot{\theta}\hat{\theta}\\
+    \vec{a}&amp;=\frac{\mathrm{d}\vec{v}}{\mathrm{d}t}=\ddot{r}\hat{r}+\dot{r}\frac{\mathrm{d}\hat{r}}{\mathrm{d}t}+\dot{r}\dot{\theta}\hat{\theta}+r\ddot{\theta}\hat{\theta}+r\dot{\theta}\frac{\mathrm{d}\hat{\theta}}{\mathrm{d}t}=(\ddot{r}-r\dot{\theta}^2)\hat{r}+(2\dot{r}\dot{\theta}+r\ddot{\theta})\hat{\theta}
 \end{aligned}
 \]</span></p>
 <h3 id="伽利略变换">伽利略变换</h3>
@@ -359,39 +359,40 @@ z&#39;=z_0+Z(t)
 <p>设火箭行驶在重力可忽略的外层空间。以相对自身的恒定速率<span class="math inline">\(\vec{u}\)</span>喷出燃料，求其运动方程。
 系统动量守恒有 <span class="math display">\[
 \begin{aligned}
-    m\vec{v}=(m-dm)(\vec{v}+d\vec{v})+dm\cdot \vec{v}_{对地}
+    m\vec{v}=(m-\mathrm{d}m)(\vec{v}+\mathrm{d}\vec{v})+\mathrm{d}m\cdot
+\vec{v}_{对地}
 \end{aligned}
 \]</span> 由伽利略变换知 <span class="math display">\[
 \vec{v}_{对地}=\vec{u}+\vec{v}
 \]</span> 故 <span class="math display">\[
 \begin{aligned}
-    m\vec{v}=m\vec{v}+md\vec{v}-dm\vec{v}-dmd\vec{v}+dm\vec{u}+dm\vec{v}
+    m\vec{v}=m\vec{v}+m\mathrm{d}\vec{v}-\mathrm{d}m\vec{v}-\mathrm{d}m\mathrm{d}\vec{v}+\mathrm{d}m\vec{u}+\mathrm{d}m\vec{v}
 \end{aligned}
 \]</span> 略去二阶小量得 <span class="math display">\[\begin{aligned}
-    0&amp;=md\vec{v}+dm\vec{u}\\
-    d\vec{v}&amp;=-\frac{dm}{m}\vec{u}\\
-    \int_{0}^{v}d\vec{v}&amp;=-\vec{u}\int_{m}^{m_0}\frac{dm}{m}\\
+    0&amp;=m\mathrm{d}\vec{v}+\mathrm{d}m\vec{u}\\
+    \mathrm{d}\vec{v}&amp;=-\frac{\mathrm{d}m}{m}\vec{u}\\
+    \int_{0}^{v}\mathrm{d}\vec{v}&amp;=-\vec{u}\int_{m}^{m_0}\frac{\mathrm{d}m}{m}\\
     \vec{v}&amp;=\vec{u}ln(\frac{m}{m_0})
 \end{aligned}
 \]</span> <span class="math inline">\(ln(\frac{m}{m_0})&lt;0\)</span>代表<span class="math inline">\(\vec{v}\)</span>和<span class="math inline">\(\vec{u}\)</span>反向。</p>
 <h3 id="冲量定理">冲量定理</h3>
 <p>力是单位时间内物体在相互作用中传递的动量 <span class="math display">\[
-\vec{f}=\frac{d\vec{p}}{dt}
-\]</span> 力的叠加原理：<span class="math inline">\(\frac{d\vec{p_i}}{dt}=\vec{f_i}=\sum_{i\neq
+\vec{f}=\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}
+\]</span> 力的叠加原理：<span class="math inline">\(\frac{\mathrm{d}\vec{p_i}}{\mathrm{d}t}=\vec{f_i}=\sum_{i\neq
 j}f_{ij}\)</span></p>
 <p>因为<span class="math inline">\(\vec{f}_{ij}=-\vec{f}_{ji}\)</span>故<span class="math inline">\(\sum_{i\neq
 j}\vec{f_{ij}}=0\)</span>，即质点系内力矢量和为0，设<span class="math inline">\(\vec{P}=\sum_{i}\vec{p}_i\)</span>则有质点系动量定理
 <span class="math display">\[
-\frac{d\vec{P}}{dt}=\sum f_外
+\frac{\mathrm{d}\vec{P}}{\mathrm{d}t}=\sum f_外
 \]</span> 力对时间的积累为冲量，记为<span class="math inline">\(\vec{I}\)</span>。 <span class="math display">\[
-\vec{I}=\int\vec{f}dt
+\vec{I}=\int\vec{f}\mathrm{d}t
 \]</span> 动量定理表述为，外力冲量等于系统动量改变量 <span class="math display">\[
-\vec{I}=\int_{t_0}^{t_1}\vec{f}dt=\vec{p}(t_1)-\vec{p}(t_0)
+\vec{I}=\int_{t_0}^{t_1}\vec{f}\mathrm{d}t=\vec{p}(t_1)-\vec{p}(t_0)
 \]</span></p>
 <h3 id="牛顿三定律">牛顿三定律</h3>
 <p>一、任何物体在不受力或受合外力为0时始终保持匀速直线运动或静止状态。（这个定律又被称为惯性定律，它定义了惯性系）<br>
 二、物体所受合外力等于物体动量变化率 <span class="math display">\[
-\vec{f}=\frac{d\vec{p}}{dt}
+\vec{f}=\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}
 \]</span> 三、力的作用是相互的。</p>
 <h3 id="非惯性系与惯性力">非惯性系与惯性力</h3>
 <p>定义一个惯性系<span class="math inline">\(K\)</span>与一个非惯性系<span class="math inline">\(K&#39;\)</span>则惯性定律在<span class="math inline">\(K&#39;\)</span>中不成立，在<span class="math inline">\(K\)</span>系中看起来静止或匀速直线运动的物体在<span class="math inline">\(K&#39;\)</span>系中并不是这样，它们的运动状态会发生改变看起来就像受力一样，我们把这种“看起来受的力”称为惯性力。在<span class="math inline">\(K&#39;\)</span>系相对于<span class="math inline">\(K\)</span>系运动状态不同的情况下，惯性力也不同
@@ -722,8 +723,8 @@ m}}{2}\omega^2A^2\)</span><br>
 m\frac{\partial^2u_n}{\partial t^2}-c^2\frac{\partial^2u_n}{\partial
 x^2}=0
 \]</span> 以声波为例，其波动方程为 <span class="math display">\[
-\frac{\partial \tilde{\rho}}{\partial t^2}-(\frac{\partial p}{\partial
-\rho})_0\frac{\partial \tilde{\rho}}{\partial x^2}=0
+\frac{\partial^2 \tilde{\rho}}{\partial t^2}-(\frac{\partial p}{\partial
+\rho})_0\frac{\partial^2 \tilde{\rho}}{\partial x^2}=0
 \]</span></p>
 <h3 id="多普勒效应">多普勒效应</h3>
 <p><span class="math display">\[
@@ -751,7 +752,7 @@ x^2}=0
 \]</span></p>
 <h2 id="狭义相对论">狭义相对论</h2>
 <h3 id="两个基本假设">两个基本假设</h3>
-<p>等效原理：任何惯性系的物理规律相同。
+<p>等效原理：任何惯性系的物理规律相同。<br>
 光速不变原理：任何惯性系中真空光速均为<span class="math inline">\(c\)</span>。</p>
 <h3 id="其它">其它</h3>
 <p>其它的不咋考不作讲解。</p>
