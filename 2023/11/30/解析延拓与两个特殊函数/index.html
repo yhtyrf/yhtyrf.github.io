@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/111450476_p0.png">
 <meta property="article:published_time" content="2023-11-30T09:37:26.000Z">
-<meta property="article:modified_time" content="2024-01-07T11:29:45.036Z">
+<meta property="article:modified_time" content="2024-01-08T05:04:51.195Z">
 <meta property="article:author" content="曳涂">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="复变函数">
@@ -241,7 +241,7 @@
         
         
         
-          42 分钟
+          43 分钟
         
       </span>
     
@@ -313,7 +313,7 @@ _2=\sigma_{12}\)</span>非空，且在<span class="math inline">\(\sigma_{12}\)<
     &amp;=z\Gamma(z)
 \end{aligned}
 \]</span> 又易知<span class="math inline">\(\Gamma(2)=1\)</span>，故<span class="math inline">\(\Gamma(n)=(n-1)!\)</span>。 <span class="math inline">\(\Gamma\)</span>函数还有一个重要性质。即<span class="math inline">\(\Gamma (z)\Gamma
-(1-z)=\frac{\pi}{sin(z\pi)}\)</span>证明如下 <span class="math display">\[
+(1-z)=\frac{\pi}{\sin(z\pi)}\)</span>证明如下 <span class="math display">\[
 \begin{aligned}
     \Gamma (z)\Gamma
 (1-z)&amp;=\int_{0}^{\infty}e^{-t}t^{z-1}\mathrm{d}t\int_{0}^{\infty}e^{-s}s^{-z}\mathrm{d}s\\
@@ -343,17 +343,17 @@ _2=\sigma_{12}\)</span>非空，且在<span class="math inline">\(\sigma_{12}\)<
 \mathrm{d}\eta\\
     &amp;=\int_{0}^{\infty}e^{-\zeta}d\zeta\int_{0}^{\infty}\frac{\eta^{z-1}}{1+\eta}\mathrm{d}\eta\\
     &amp;=\int_{0}^{\infty}\frac{\eta^{z-1}}{1+\eta}\mathrm{d}\eta\\
-    &amp;=\frac{\pi}{sin(\pi z)}
+    &amp;=\frac{\pi}{\sin(\pi z)}
 \end{aligned}
 \]</span><br>
 由该性质有<span class="math inline">\(\Gamma(\frac{1}{2})=\sqrt{\pi}\)</span>。 <span class="math inline">\(\Gamma\)</span>函数还有一个重要应用是计算形如<span class="math inline">\(\int_0^{\infty}x^ne^{-x^2}\)</span>这样的积分。只需做一个简单换元，令<span class="math inline">\(t=r^2\)</span>则原积分变为<span class="math inline">\(\int_{-\infty}^{\infty}r^{2x-1}e^{-r^2}dr\)</span>,即<span class="math inline">\(\Gamma(\frac{p+1}{2})=\int_{-\infty}^{\infty}r^{p}e^{-r^2}dr\)</span></p>
 <h2 id="b函数"><span class="math inline">\(B\)</span>函数</h2>
 <p>定义 <span class="math display">\[
 B(p,q)=\int^{1}_{0}t^{p-1}(1-t)^{q-1}\mathrm{d}t
-\]</span> 令<span class="math inline">\(t=sin^2\phi\)</span> <span class="math display">\[
+\]</span> 令<span class="math inline">\(t=\sin^2\phi\)</span> <span class="math display">\[
 \begin{aligned}
-    \int^{1}_{0}t^{p-1}(1-t)^{q-1}\mathrm{d}t&amp;=2\int^{\frac{\pi}{2}}_{0}sin^{2p-1}\phi
-cos^{2q-1}\phi \mathrm{d}\phi
+    \int^{1}_{0}t^{p-1}(1-t)^{q-1}\mathrm{d}t&amp;=2\int^{\frac{\pi}{2}}_{0}\sin^{2p-1}\phi
+\cos^{2q-1}\phi \mathrm{d}\phi
 \end{aligned}
 \]</span> 容易发现<span class="math inline">\(B\)</span>函数与<span class="math inline">\(\Gamma\)</span>函数有如下关系 <span class="math display">\[
 B(p,q)=\frac{\Gamma(p)\Gamma(q)}{\Gamma(p+q)}
@@ -370,9 +370,9 @@ B(p,q)=\frac{\Gamma(p)\Gamma(q)}{\Gamma(p+q)}
 \]</span> 则 <span class="math display">\[
 \begin{aligned}
     \Gamma(p)\Gamma(q)&amp;=4\iint_{0}^{\infty}e^{-(x^2+y^2)}x^{2p-1}y^{2q-1}\mathrm{d}x\mathrm{d}y\\
-    &amp;=4\iint_{0}^{\infty}e^{-\rho ^2}(\rho cos\theta)^{2p-1}(\rho
-sin\theta)^{2q-1}\rho\mathrm{d}\rho \mathrm{d}\theta\\
-    &amp;=2\int^{\frac{\pi}{2}}_{0}sin^{2p-1}\theta cos^{2q-1}\theta
+    &amp;=4\iint_{0}^{\infty}e^{-\rho ^2}(\rho \cos\theta)^{2p-1}(\rho
+\sin\theta)^{2q-1}\rho\mathrm{d}\rho \mathrm{d}\theta\\
+    &amp;=2\int^{\frac{\pi}{2}}_{0}\sin^{2p-1}\theta \cos^{2q-1}\theta
 \mathrm{d}\theta\cdot 2\int_{0}^{\infty}e^{-\rho
 ^2}\rho^{2(p+q-1)}\mathrm{d}\frac{\rho^2}{2}\\
     &amp;=\Gamma(p+q)B(p,q)
